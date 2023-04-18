@@ -7,4 +7,5 @@ import (
 
 func RegisterAdminRoutes(adminGroup *gin.RouterGroup) {
 	adminGroup.POST("/create", admin.AddAdmin)
+	adminGroup.GET("/info", admin.GetAdminInfo)
 }

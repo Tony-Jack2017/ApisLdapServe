@@ -1,0 +1,15 @@
+[system]
+token_issuer = "ApisLdapServe"
+token_secret_key = "<--apis-->"
+token_expired_time = 24
+
+[database]
+host = "192.168.2.5"
+user = "gan"
+password = "apis1618"
+dbname = "LDAP"
+port = 5432
+
+[ldap]
+host = "192.168.2.5"
+password = "apis1618"

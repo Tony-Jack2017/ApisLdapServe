@@ -1,6 +1,7 @@
 package base
 
 import (
+	"ApisLdapServe/common/middleware"
 	routerGroup "ApisLdapServe/router"
 	"github.com/gin-gonic/gin"
 )
@@ -12,9 +13,12 @@ func InitRouter() {
 }
 
 func RegisterRouter(router *gin.Engine) {
-	user := router.Group("/user")
-	admin := router.Group("/admin")
-	account := router.Group("/account")
+	router.Use(middleware.CORSMiddleware())
+	back := router.Group("/api/back")
+
+	user := back.Group("/user")
+	admin := back.Group("/admin")
+	account := back.Group("/account")
 	routerGroup.RegisterUserRoutes(user)
 	routerGroup.RegisterAdminRoutes(admin)
 	routerGroup.RegisterAccountRoutes(account)
