@@ -15,7 +15,6 @@ func InitRouter() {
 func RegisterRouter(router *gin.Engine) {
 	router.Use(middleware.CORSMiddleware())
 	back := router.Group("/api/back")
-
 	user := back.Group("/user")
 	admin := back.Group("/admin")
 	account := back.Group("/account")

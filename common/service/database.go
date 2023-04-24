@@ -1,6 +1,7 @@
 package service
 
 import (
+	"ApisLdapServe/common/base"
 	"fmt"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -12,11 +13,11 @@ var dsn string
 func InitDatabase() {
 	dsn = fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%d sslmode=disable TimeZone=Asia/Shanghai",
-		"127.0.0.1",
-		"postgres",
-		"apis1618",
-		"LDAP",
-		5432,
+		base.Conf.Database.Host,
+		base.Conf.Database.User,
+		base.Conf.Database.Password,
+		base.Conf.Database.DBName,
+		base.Conf.Database.Port,
 	)
 }
 

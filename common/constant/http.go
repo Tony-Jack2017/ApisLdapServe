@@ -2,10 +2,10 @@ package constant
 
 const Success = "A_SUC_0000"
 
-// Request
+// Client
 
-const ParamsError = "A_ERR_RQ_"
+const ParamsError = "AC_ERR_RQ_"
 
-// Response
+// Server
 
-const SQLError = "A_ERR_RP_"
+const SQLError = "AS_ERR_RP_"

@@ -1,10 +1,11 @@
 package model
 
 type User struct {
-	UUID  string `gorm:"primaryKey"`
-	Name  string `gorm:""`
-	Phone string `gorm:""`
-	Email string `gorm:""`
+	UID    string `gorm:"primaryKey;column:u_id"`
+	Name   string `gorm:"column:name"`
+	Avatar string `gorm:"column:avatar"`
+	Phone  string `gorm:"column:phone"`
+	Email  string `gorm:"column:email"`
 }
 
 type UserReqCreate struct {
