@@ -31,6 +31,7 @@ type DatabaseConfig struct {
 type LdapConfig struct {
 	Host     string `toml:"host"`
 	Password string `toml:"password"`
+	Port     string `toml:"port"`
 }
 
 func InitViper(env string) {

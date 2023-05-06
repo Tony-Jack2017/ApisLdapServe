@@ -9,4 +9,7 @@ func RegisterAccountRoutes(accountGroup *gin.RouterGroup) {
 	accountGroup.POST("/signIn", account.SignIn)
 	accountGroup.POST("/forget", account.ForgetPassword)
 	accountGroup.POST("/modify_password", account.ModifyPassword)
+
+	accountGroup.POST("/binding_email", account.BindingEmail)
+	accountGroup.POST("/binding_phone", account.BindingPhone)
 }

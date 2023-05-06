@@ -9,15 +9,15 @@ import (
 )
 
 type ApisClaims struct {
-	Account   string `json:"account"`
-	AccountID string `json:"accountId"`
+	Account string `json:"account"`
+	AdminID string `json:"adminId"`
 	jwt.RegisteredClaims
 }
 
 func GenerateToken(account string, accountId string) (string, error) {
 	claim := ApisClaims{
-		Account:   account,
-		AccountID: accountId,
+		Account: account,
+		AdminID: accountId,
 		RegisteredClaims: jwt.RegisteredClaims{
 			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * 24)),
 			Issuer:    "ApisLdapServe",

@@ -17,3 +17,7 @@ type UserReqUpdate struct {
 func (user *User) TableName() string {
 	return "ldap_users"
 }
+
+func UserAddSQL() {
+
+}
